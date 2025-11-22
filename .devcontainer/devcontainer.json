@@ -1,27 +1,27 @@
 {
-    "name": "Python Playground for VSCode",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "pytemplate",
-    "workspaceFolder": "/workspace",
-    "customizations": {
-        "vscode": {
-            "settings": {
-                "terminal.integrated.shell.linux": "/bin/bash",
-                "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
-                "editor.tabSize": 4,
-                "editor.insertSpaces": true,
-                "editor.detectIndentation": false,
-                "files.trimTrailingWhitespace": true,
-                "files.insertFinalNewline": true,
-                "python.formatting.provider": "black",
-                "python.linting.enabled": true,
-                "python.linting.flake8Enabled": true
-            },
-            "extensions": [
-                "ms-python.python",
-                "ms-python.vscode-pylance"
-            ]
-        }
-    },
-    "postCreateCommand": "git config --global --add safe.directory /workspace && uv sync --all-extras && uv run python -c 'print(\"✅ UV environment ready!\")'"
+  "name": "好きなプロジェクト名を入れてください",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "python-template",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "python.formatting.provider": "black",
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "postCreateCommand": "git config --global --add safe.directory /workspace && uv sync --all-extras && uv run python -c 'print(\"✅ UV environment ready!\")'"
 }
